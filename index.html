@@ -1,0 +1,71 @@
+<!-- Stopwatch UI customized by Jaishree Verma for go-ticket project -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stopwatch</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+    <div id="particles-js"></div>
+
+    <div id="particles-js1" class="gradient"></div>
+    <div id="particles-js2" class="gradient"></div>
+
+
+    <div id="content">
+        <div id="stopwatch">00:00:00</div>
+        <div id="stopwatch-buttons">
+            <button id="startStop">Start</button>
+            <button id="lap">Lap</button>
+            <button id="reset">Reset</button>
+        </div>
+        <div id="background-button">
+            <button id="change-background">Random Background</button>
+        </div>
+        <div id="laps"></div>
+        
+                
+        
+        <div id="particle-slider-container">
+            <input type="range" min="1" max="100" value="50" class="slider" id="particle-slider">
+        <div id="particle-slider-label">Particle Density</div>
+       
+        <div id="background-button-color">
+            <div id="color-picker-wrapper1">
+                <input type="text" id="color-picker1" data-coloris>
+                <label for="color-picker1">Color 1</label> <!-- Add this line -->
+            </div>
+            <div id="color-picker-wrapper2">
+                <input type="text" id="color-picker2" data-coloris>
+                <label for="color-picker2">Color 2</label> <!-- Add this line -->
+            </div>
+            <button id="change-background-color">Change Background</button>
+        </div>
+        <!--
+        <div id="background-button-color">
+            <input data-jscolor="" id="color-picker">
+            <button id="change-background-color">Change Background</button>
+        </div> -->
+    
+    </div>
+
+    <div id="copyright">Copyright (c) 2024 Daniel Hong</div>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mdbassit/Coloris@latest/dist/coloris.min.css"/>
+    <script src="https://cdn.jsdelivr.net/gh/mdbassit/Coloris@latest/dist/coloris.min.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jscolor/2.4.5/jscolor.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="app.js"></script>
+    <script src="stopwatch.js"></script>
+
+    <!-- <script src="mousetrail.js"></script> -->
+</body>
+</html>

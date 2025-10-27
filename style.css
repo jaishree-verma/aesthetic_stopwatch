@@ -1,0 +1,363 @@
+body {
+    height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+}
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    #stopwatch:hover {
+        transform: scale(1.1); /* Increase the size by 10% */
+        transition: transform 0.3s ease-in-out; /* Animate the transformation */
+    }
+}
+
+#copyright {
+    font-size: 15px;
+    color: black;
+    z-index: 50px;
+    position: fixed;
+    bottom: 15px;
+    right: 20px;
+}
+
+.gradient {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: opacity 5s;
+    z-index: 0;
+}
+
+#particles-js1 {
+    opacity: 1;
+}
+
+#particles-js2 {
+    opacity: 0;
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1;}
+    100% { opacity: 0;}
+}
+
+@keyframes Gradient {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+
+  
+  @keyframes fade {
+    to {
+      opacity: 0;
+      transform: scale(0);
+    }
+}
+
+#content {
+    color: white;
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    pointer-events: none; /* Disabled   pointer events -- Make sure to set auto to all interactive elements*/
+}
+
+
+/* Slider */
+
+#particle-slider-container {
+    position: absolute;
+    z-index: 5;
+    left: 20px;
+    bottom: 20px;
+    pointer-events: auto;
+}  
+
+#particle-slider {
+    -webkit-appearance: none; /* Override default CSS styles */
+    appearance: none;
+    width: 100%; /* Full-width */
+    height: 15px; /* Specified height */
+    margin-bottom: 10px; /* Specified margin */
+    background: transparent; /* Transparent background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Shadow for better visibility */
+}
+
+#particle-slider:hover {
+    opacity: 1; /* Fully visible on hover */
+}
+
+#particle-slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 10px; /* Set a specific slider handle width */
+    height: 20px; /* Slider handle height */
+    background: black; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+    opacity: 0.8;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Shadow for better visibility */
+}
+
+#particle-slider::-moz-range-thumb {
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #4CAF50; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+    box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Shadow for better visibility */
+}
+
+#particle-slider-label {
+    position: absolute;
+    bottom: 100%; /* Position it at the bottom of the slider */
+    color: #4CAF50; /* Green text to match the slider handle */
+    font-size: 10px; /* Adjust as needed */
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    text-align: left;
+
+    opacity: 0.3; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+}
+
+#particle-slider-label:hover {
+    opacity: 1; /* Fully visible on hover */
+}
+
+/* */
+
+#stopwatch {
+    font-size: 80px;
+    margin-bottom: 20px;
+    text-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+    pointer-events: auto;
+}
+
+#stopwatch:hover {
+    transform: scale(1.1); /* 20% might be much */
+    text-shadow: 0px 10px 25px rgba(0, 0, 0, 0.7);
+}
+
+#stopwatch-buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.message {
+    color: rgb(30, 196, 247);
+    position: fixed;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    opacity: 0.5;
+    padding: 1rem; /* Use rem units for scalable design */
+    border-radius: 5px; /* Add border radius for a softer look */
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16); /* Add box-shadow for depth */
+    transition: all 0.3s ease-in-out; /* Add transition for smooth appearance */
+}
+
+
+
+#background-button-color {
+    display: flex;
+    align-items: left;
+    justify-content: space-around;
+    height: 30px;
+}
+
+#change-background-color {
+    width: 60px;
+    height: 30px;
+    font-size: 8px;
+    margin-left: 10px;
+    padding: 3px 3px;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+    transition-duration: 0.2s;
+    pointer-events: auto;
+}
+
+
+#change-background-color:hover {
+    background: transparent;
+    transform: scale(1.1);
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.7);
+}
+
+#color-picker-wrapper1 {
+    display: inline-block;
+    transition-duration: 0.2s;
+}
+
+#color-picker-wrapper1:hover {
+    transform: scale(1.1);
+}
+
+#color-picker-wrapper2 {
+    display: inline-block;
+    transition-duration: 0.2s;
+}
+
+#color-picker-wrapper2:hover {
+    transform: scale(1.1);
+}
+
+
+#color-picker1 {
+    width: 80px;
+    height: 20px;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 10px;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+#color-picker1:hover {
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.7);
+}
+
+#color-picker2 {
+    width: 80px;
+    height: 20px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 10px;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+#color-picker2:hover {
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.7);
+}
+
+#change-background {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    pointer-events: auto;
+
+}
+
+#color-picker-wrapper1 label,
+#color-picker-wrapper2 label {
+    display: block;
+    margin-top: 0.2rem;
+    margin-left: 0; /* Ensure there's no left margin */
+    padding-left: 0; /* Ensure there's no left padding */
+    font-size: 0.6rem;
+    color: #001602;
+    text-align: right; /* Align the text to the left */
+    opacity: 0.5;
+}
+
+#color-picker-wrapper1 label:hover,
+#color-picker-wrapper2 label:hover {
+    opacity: 1;
+}
+/* */
+
+#startStop, #lap, #reset {
+    font-size: 20px;
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+    transition-duration: 0.2s;
+    pointer-events: auto;
+}
+
+#startStop:hover, #lap:hover, #reset:hover {
+    background: transparent;
+    transform: scale(1.1);
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.7);
+}
+#change-background {
+    background: transparent;
+    border: none;
+    color: white;
+    padding: 15px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    margin: 2px 2px;
+    transition-duration: 0.2s;
+    cursor: pointer;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+}
+
+#change-background:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.7);
+}
+
+
+#laps {
+    width: 300px; /* Fixed width */
+    height: 50px; /* Fixed height */
+    overflow-y: scroll; /* Enable vertical scrolling */
+    margin-top: 20px;
+    border: 1px solid #0083b0;
+    border-radius: 5px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    pointer-events: auto;
+
+    scrollbar-width: thin;
+    scrollbar-color: #0083b0 transparent;
+}
+#laps::-webkit-scrollbar {
+    width: 10px; /* Reduced width */
+}
+#laps::-webkit-scrollbar-track {
+    background: transparent; /* Changed color */
+}
+#laps::-webkit-scrollbar-thumb {
+    background-color: #0083b0;
+    border: 3px solid transparent;
+}
+
+.lap {
+    margin-top: 10px;
+    font-size: 15px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+html, body {
+    overflow-y: hidden;
+    height: 100%;
+}
