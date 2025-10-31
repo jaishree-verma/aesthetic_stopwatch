@@ -1,4 +1,4 @@
-# Simple Stopwatch Program Built Using JAVASCIPT + VANILLA CSS + VERCEL ( deploy )
+# Simple Stopwatch Program Built Using JAVASCIPT + VANILLA CSS + VERCEL (deploy)
 
 #### Live : https://aesthetic-stopwatch-860vsy99i-jaishreevermawork-9576s-projects.vercel.app
 
